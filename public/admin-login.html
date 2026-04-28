@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Login | Agarwal Medical</title>
+    <meta name="description" content="Agarwal Medical admin login.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="admin-page">
+    <main class="login-shell">
+      <form class="login-panel" id="adminLoginForm">
+        <a class="brand" href="/" aria-label="Agarwal Medical home">
+          <span class="brand-mark">AM</span>
+          <span>
+            <strong>Agarwal Medical</strong>
+            <small>Admin login</small>
+          </span>
+        </a>
+        <div>
+          <p class="eyebrow">Secure access</p>
+          <h1>Admin Login</h1>
+        </div>
+        <label>
+          Username
+          <input id="adminUsername" name="username" autocomplete="username" required>
+        </label>
+        <label>
+          Password
+          <input id="adminPassword" name="password" type="password" autocomplete="current-password" required>
+        </label>
+        <button class="submit-button" type="submit">Login</button>
+        <p class="form-status" id="loginStatus" role="status"></p>
+        <a class="admin-link" href="/">Back to website</a>
+      </form>
+    </main>
+
+    <script src="/admin-login.js"></script>
+  </body>
+</html>

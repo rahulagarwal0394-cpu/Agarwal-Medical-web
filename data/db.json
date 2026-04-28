@@ -1,0 +1,244 @@
+{
+  "company": {
+    "name": "Agarwal Medical",
+    "owner": "Rahul Agarwal",
+    "phone": "+91 91230 96836",
+    "whatsapp": "+91 91230 96836",
+    "email": "care@agarwalmedical.in",
+    "address": "Home healthcare equipment rental and sales service"
+  },
+  "categories": [
+    "Respiratory Care",
+    "Mobility",
+    "Patient Bed",
+    "Monitoring",
+    "Consumables"
+  ],
+  "serviceAreas": [
+    {
+      "pincode": "712201",
+      "area": "Serampore",
+      "rentAvailable": true,
+      "deliveryTime": "Same day or next day"
+    },
+    {
+      "pincode": "712203",
+      "area": "Serampore",
+      "rentAvailable": true,
+      "deliveryTime": "Same day or next day"
+    },
+    {
+      "pincode": "712204",
+      "area": "Serampore nearby",
+      "rentAvailable": true,
+      "deliveryTime": "Within 24 hours"
+    },
+    {
+      "pincode": "712205",
+      "area": "Hooghly nearby",
+      "rentAvailable": true,
+      "deliveryTime": "Within 24-48 hours"
+    }
+  ],
+  "products": [
+    {
+      "id": "oxygen-cylinder-10l",
+      "name": "Oxygen Cylinder 10L",
+      "category": "Respiratory Care",
+      "mode": [
+        "rent",
+        "sale"
+      ],
+      "rentPrice": 10,
+      "salePrice": null,
+      "gasPrice": 450,
+      "deposit": 1000,
+      "availability": "Available today",
+      "image": "/assets/products/oxygen-cylinder-10l.png",
+      "audience": "Elderly patients, home care, clinics",
+      "highlights": [
+        "Flow meter included",
+        "Doorstep delivery",
+        "Emergency support"
+      ],
+      "badge": "Most Requested"
+    },
+    {
+      "id": "bpap-machine",
+      "name": "BPAP Machine",
+      "category": "Respiratory Care",
+      "mode": [
+        "rent",
+        "sale"
+      ],
+      "rentPrice": 450,
+      "salePrice": 42000,
+      "deposit": 8000,
+      "availability": "Limited stock",
+      "image": "/assets/products/bpap-machine.png",
+      "audience": "Sleep apnea and respiratory support",
+      "highlights": [
+        "Mask fitting help",
+        "Doctor prescription friendly",
+        "Sanitized kit"
+      ],
+      "badge": "Doctor Preferred"
+    },
+    {
+      "id": "oxygen-concentrator-5l",
+      "name": "Oxygen Concentrator 5L",
+      "category": "Respiratory Care",
+      "mode": [
+        "rent",
+        "sale"
+      ],
+      "rentPrice": 350,
+      "salePrice": 36000,
+      "deposit": 6000,
+      "availability": "Available",
+      "image": "/assets/products/oxygen-concentrator-5l.png",
+      "audience": "Long-term oxygen therapy",
+      "highlights": [
+        "Low-noise model",
+        "Power backup guidance",
+        "Home setup"
+      ],
+      "badge": "Home Care"
+    },
+    {
+      "id": "wheelchair-foldable",
+      "name": "Foldable Wheelchair",
+      "category": "Mobility",
+      "mode": [
+        "rent",
+        "sale"
+      ],
+      "rentPrice": 90,
+      "salePrice": 5200,
+      "deposit": 1500,
+      "availability": "Available",
+      "image": "/assets/products/wheelchair-foldable.png",
+      "audience": "Senior citizens and recovery support",
+      "highlights": [
+        "Foldable frame",
+        "Footrest included",
+        "Easy transport"
+      ],
+      "badge": "Senior Friendly"
+    },
+    {
+      "id": "hospital-bed",
+      "name": "Semi Fowler Bed",
+      "category": "Patient Bed",
+      "mode": [
+        "rent",
+        "sale"
+      ],
+      "rentPrice": 280,
+      "salePrice": 18500,
+      "deposit": 5000,
+      "availability": "Available in 24 hours",
+      "image": "/assets/products/hospital-bed.png",
+      "audience": "Post-surgery and long-term care",
+      "highlights": [
+        "Mattress option",
+        "Side rails",
+        "Installation support"
+      ],
+      "badge": "Care Setup"
+    },
+    {
+      "id": "pulse-oximeter",
+      "name": "Pulse Oximeter",
+      "category": "Monitoring",
+      "mode": [
+        "sale"
+      ],
+      "rentPrice": null,
+      "salePrice": 950,
+      "deposit": 0,
+      "availability": "Available",
+      "image": "/assets/products/pulse-oximeter.png",
+      "audience": "Home monitoring and clinics",
+      "highlights": [
+        "SpO2 and pulse",
+        "Battery included",
+        "Simple display"
+      ],
+      "badge": "Quick Buy"
+    },
+    {
+      "id": "nebulizer-machine",
+      "name": "Nebulizer Machine",
+      "category": "Respiratory Care",
+      "mode": [
+        "sale"
+      ],
+      "rentPrice": null,
+      "salePrice": 1850,
+      "deposit": 0,
+      "availability": "Available",
+      "image": "/assets/products/nebulizer-machine.png",
+      "audience": "Respiratory medication support",
+      "highlights": [
+        "Adult and child mask",
+        "Compact body",
+        "Warranty support"
+      ],
+      "badge": "Clinic Use"
+    },
+    {
+      "id": "walker",
+      "name": "Adjustable Walker",
+      "category": "Mobility",
+      "mode": [
+        "rent",
+        "sale"
+      ],
+      "rentPrice": 50,
+      "salePrice": 2100,
+      "deposit": 800,
+      "availability": "Available",
+      "image": "/assets/products/walker.png",
+      "audience": "Elderly mobility support",
+      "highlights": [
+        "Height adjustable",
+        "Lightweight",
+        "Stable grip"
+      ],
+      "badge": "Recovery"
+    }
+  ],
+  "enquiries": [
+    {
+      "id": "ENQ-1777387697489",
+      "name": "Rahul Agarwa",
+      "phone": "9123096836",
+      "email": "rahulagarwal0394@gmail.com",
+      "city": "Serampore",
+      "pincode": "712201",
+      "serviceArea": {
+        "pincode": "712201",
+        "area": "Serampore",
+        "rentAvailable": true,
+        "deliveryTime": "Same day or next day"
+      },
+      "patientType": "Home patient",
+      "note": "",
+      "items": [
+        {
+          "id": "oxygen-cylinder-10l",
+          "name": "Oxygen Cylinder 10L",
+          "qty": 1,
+          "rentPrice": 10,
+          "salePrice": null,
+          "gasPrice": 450,
+          "deposit": 1000
+        }
+      ],
+      "prescription": null,
+      "status": "New",
+      "createdAt": "2026-04-28T14:48:17.491Z"
+    }
+  ]
+}

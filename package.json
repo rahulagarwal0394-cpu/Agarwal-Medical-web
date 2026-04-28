@@ -1,0 +1,24 @@
+{
+  "name": "agarwal-medical-ecommerce",
+  "version": "1.0.0",
+  "description": "Agarwal Medical healthcare rental and sales ecommerce website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "vercel-build": "echo Vercel static build ready"
+  },
+  "dependencies": {
+    "@vercel/postgres": "^0.10.0"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "keywords": [
+    "healthcare",
+    "ecommerce",
+    "medical-equipment",
+    "rental"
+  ],
+  "author": "Rahul Agarwal",
+  "license": "UNLICENSED"
+}

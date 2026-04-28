@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agarwal Medical | Healthcare Equipment Rent & Sale</title>
+    <meta name="description" content="Agarwal Medical provides oxygen cylinders, BPAP machines, wheelchairs, hospital beds and home healthcare equipment on rent and sale.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Agarwal Medical home">
+        <span class="brand-mark">AM</span>
+        <span>
+          <strong>Agarwal Medical</strong>
+          <small>Healthcare rent & sale</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#catalog">Products</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#support">Support</a>
+      </nav>
+      <button class="cart-button" id="cartButton" type="button" aria-label="Open enquiry cart">
+        <span aria-hidden="true">Bag</span>
+        <strong id="cartCount">0</strong>
+      </button>
+    </header>
+
+    <div class="pincode-modal open" id="pincodeModal" aria-label="Check rent availability" aria-modal="true" role="dialog">
+      <div class="pincode-modal-panel">
+        <button class="icon-button modal-close" id="pincodeModalClose" type="button" aria-label="Close">x</button>
+        <p class="eyebrow">Rent service check</p>
+        <h2>Enter your PIN code</h2>
+        <p class="modal-copy">Pehle PIN code check kar lijiye, taaki aapko pata chal sake rent service aapke area mein available hai ya nahi.</p>
+        <div class="pincode-inline modal-pincode-inline">
+          <input id="modalPincode" type="text" inputmode="numeric" maxlength="6" placeholder="6 digit PIN code">
+          <button id="modalPincodeButton" type="button">Check</button>
+        </div>
+        <p class="pincode-status" id="modalPincodeStatus" role="status"></p>
+        <button class="secondary-action modal-continue" id="modalContinue" type="button">Continue</button>
+      </div>
+    </div>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Agarwal Medical</h1>
+          <p class="lead">Home healthcare equipment for patients, senior citizens, clinics and doctor-referred care.</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#catalog">Browse Products</a>
+            <a class="secondary-action" href="tel:+919123096836">Call Now</a>
+          </div>
+          <div class="hero-pincode-card pincode-checker">
+            <label for="rentPincode">Check rent availability</label>
+            <div class="pincode-inline">
+              <input id="rentPincode" type="text" inputmode="numeric" maxlength="6" placeholder="PIN code">
+              <button id="pincodeButton" type="button">Check</button>
+            </div>
+            <p class="pincode-status" id="pincodeStatus" role="status"></p>
+          </div>
+          <div class="trust-strip" aria-label="Service highlights">
+            <span>Sanitized equipment</span>
+            <span>Rent or buy</span>
+            <span>Doorstep setup</span>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="/assets/healthcare-hero.png" alt="Home healthcare equipment with caregiver support">
+        </figure>
+      </section>
+
+      <section class="quick-panel" aria-label="Quick product search">
+        <div class="search-box">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="search" placeholder="oxygen, bpap, wheelchair">
+        </div>
+        <select id="categorySelect" aria-label="Category">
+          <option value="all">All Categories</option>
+        </select>
+      </section>
+
+      <section class="catalog-section" id="catalog">
+        <div class="section-heading">
+          <p class="eyebrow">Equipment catalog</p>
+          <h2>Medical items for rent and sale</h2>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="doctor-band" id="doctors">
+        <div>
+          <p class="eyebrow">For doctors and clinics</p>
+          <h2>Prescription-friendly home care support</h2>
+          <p>Share patient needs for oxygen therapy, BPAP support, mobility recovery or post-surgery care. Agarwal Medical can coordinate equipment, setup and follow-up.</p>
+        </div>
+        <button class="primary-action" type="button" data-open-enquiry>Refer Patient</button>
+      </section>
+
+      <section class="support-section" id="support">
+        <article>
+          <strong>Respiratory care</strong>
+          <span>Oxygen cylinder, concentrator, BPAP, nebulizer and accessories.</span>
+        </article>
+        <article>
+          <strong>Senior care</strong>
+          <span>Wheelchair, walker, patient bed and recovery support items.</span>
+        </article>
+        <article>
+          <strong>Fast enquiry</strong>
+          <span>Product request details are saved directly in the backend database.</span>
+        </article>
+      </section>
+    </main>
+
+    <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Enquiry cart">
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+        <div class="drawer-head">
+          <h2 id="drawerTitle">Enquiry Cart</h2>
+          <button class="icon-button" id="closeDrawer" type="button" aria-label="Close">x</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <form class="enquiry-form" id="enquiryForm">
+          <div class="form-row">
+            <label for="customerName">Name</label>
+            <input id="customerName" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="customerPhone">Phone</label>
+            <input id="customerPhone" name="phone" autocomplete="tel" required>
+          </div>
+          <div class="form-row">
+            <label for="customerEmail">Email</label>
+            <input id="customerEmail" name="email" type="email" autocomplete="email" placeholder="Optional">
+          </div>
+          <div class="form-row">
+            <label for="customerCity">City</label>
+            <input id="customerCity" name="city" autocomplete="address-level2">
+          </div>
+          <div class="form-row">
+            <label for="customerPincode">PIN Code</label>
+            <input id="customerPincode" name="pincode" inputmode="numeric" maxlength="6" autocomplete="postal-code" required>
+          </div>
+          <div class="form-grid">
+            <label>
+              Patient
+              <select name="patientType" id="patientType">
+                <option>Home patient</option>
+                <option>Doctor referral</option>
+                <option>Clinic</option>
+                <option>Senior citizen</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row prescription-row is-hidden" id="prescriptionRow">
+            <label for="prescriptionFile">Prescription upload</label>
+            <input id="prescriptionFile" name="prescriptionFile" type="file" accept="image/*,.pdf">
+            <small>Doctor referral ke liye prescription image ya PDF zaroori hai.</small>
+          </div>
+          <div class="form-row">
+            <label for="customerNote">Notes</label>
+            <textarea id="customerNote" name="note" rows="3" placeholder="Delivery address, patient need, prescription notes"></textarea>
+          </div>
+          <button class="submit-button" type="submit">Send Enquiry</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </aside>
+
+    <div class="bill-modal" id="billModal" aria-hidden="true" aria-label="Customer bill">
+      <div class="bill-panel" role="dialog" aria-modal="true" aria-labelledby="billTitle">
+        <div class="bill-actions no-print">
+          <button class="secondary-action" id="printBill" type="button">Print Bill</button>
+          <button class="icon-button" id="closeBill" type="button" aria-label="Close">x</button>
+        </div>
+        <div class="bill-paper" id="billPaper">
+          <div class="bill-head">
+            <div>
+              <strong>Agarwal Medical</strong>
+              <span>Healthcare Equipment Rent & Service</span>
+            </div>
+            <div>
+              <span>Phone</span>
+              <strong>+91 91230 96836</strong>
+            </div>
+          </div>
+          <h2 id="billTitle">Customer Bill</h2>
+          <div class="bill-meta" id="billMeta"></div>
+          <div class="bill-customer" id="billCustomer"></div>
+          <table class="bill-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Rent/day</th>
+                <th>Gas/Rate</th>
+                <th>Deposit</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="billItems"></tbody>
+          </table>
+          <div class="bill-total" id="billTotal"></div>
+          <p class="bill-note">Rent/day is charged separately as per actual usage days. Total payable now includes gas/rate and security deposit.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <strong>Agarwal Medical</strong>
+      <span>Owned by Rahul Agarwal</span>
+      <a href="tel:+919123096836">+91 91230 96836</a>
+      <a href="/admin-login.html">Admin Login</a>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

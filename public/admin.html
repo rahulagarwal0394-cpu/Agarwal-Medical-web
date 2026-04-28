@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Enquiries | Agarwal Medical</title>
+    <meta name="description" content="Agarwal Medical enquiry admin dashboard.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="admin-page">
+    <header class="admin-header">
+      <a class="brand" href="/" aria-label="Agarwal Medical home">
+        <span class="brand-mark">AM</span>
+        <span>
+          <strong>Agarwal Medical</strong>
+          <small>Admin enquiries</small>
+        </span>
+      </a>
+      <nav class="admin-actions" aria-label="Admin actions">
+        <a class="secondary-action" href="/">Website</a>
+        <button class="primary-action" type="button" id="refreshButton">Refresh</button>
+        <button class="secondary-action" type="button" id="logoutButton">Logout</button>
+      </nav>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-title">
+        <div>
+          <p class="eyebrow">Customer requests</p>
+          <h1>Enquiries</h1>
+        </div>
+        <div class="admin-stats" aria-label="Enquiry summary">
+          <div>
+            <span>Total</span>
+            <strong id="totalCount">0</strong>
+          </div>
+          <div>
+            <span>Doctor referral</span>
+            <strong id="doctorCount">0</strong>
+          </div>
+          <div>
+            <span>Prescriptions</span>
+            <strong id="rxCount">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-toolbar" aria-label="Enquiry filters">
+        <div class="search-box">
+          <label for="adminSearch">Search</label>
+          <input id="adminSearch" type="search" placeholder="name, phone, product, city">
+        </div>
+        <label>
+          Patient
+          <select id="patientFilter">
+            <option value="all">All patients</option>
+            <option value="Doctor referral">Doctor referral</option>
+            <option value="Home patient">Home patient</option>
+            <option value="Clinic">Clinic</option>
+            <option value="Senior citizen">Senior citizen</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="admin-table-wrap" aria-label="Saved enquiries">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Patient</th>
+              <th>Products</th>
+              <th>Note</th>
+              <th>Prescription</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="enquiryRows">
+            <tr>
+              <td colspan="7">Loading enquiries...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>
